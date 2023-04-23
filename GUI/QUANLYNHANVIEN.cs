@@ -31,6 +31,7 @@ namespace GUI
             xoa.Enabled = false;
             chon.Enabled = false;
             sua.Enabled = false;
+            button1.Enabled = false;
         }
         void clearAll(Control parent)
         {
@@ -102,12 +103,12 @@ namespace GUI
         private void huy_Click(object sender, EventArgs e)
         {
             clearAll(this);
-            gioitinh.Items.Clear();
             dateTimePicker1.Value = DateTime.Now;
             them.Enabled = true;
             xoa.Enabled = false;
             chon.Enabled = false;
             sua.Enabled = false;
+            button1.Enabled = false;
         }
 
         private void tim_Click(object sender, EventArgs e)
@@ -141,7 +142,6 @@ namespace GUI
             {
                 MessageBox.Show(kq);
                 clearAll(this);
-                gioitinh.Items.Clear();
                 dateTimePicker1.Value = DateTime.Now;
                 dataGridView1.DataSource = nvBLL.loadNV2();
                 temp = nvBLL.loadNV2();
@@ -166,6 +166,7 @@ namespace GUI
                 sua.Enabled = false;
                 dataGridView1.DataSource = nvBLL.loadNV2();
                 temp = nvBLL.loadNV2();
+                button1.Enabled = false;
 
             }
             else
@@ -190,7 +191,6 @@ namespace GUI
             {
                 MessageBox.Show(kq);
                 clearAll(this);
-                gioitinh.Items.Clear();
                 dateTimePicker1.Value = DateTime.Now;
                 dataGridView1.DataSource = nvBLL.loadNV2();
                 temp = nvBLL.loadNV2();
@@ -198,6 +198,7 @@ namespace GUI
                 xoa.Enabled = false;
                 chon.Enabled = false;
                 sua.Enabled = false;
+                button1.Enabled = false;
             }
             else
             {
@@ -208,12 +209,67 @@ namespace GUI
         private void tim2_Click(object sender, EventArgs e)
         {
             nvBLL nvBLL = new nvBLL();
-            dataGridView1.DataSource = nvBLL.loadTNV2(hoten2.Text);
+            string kq = nvBLL.checkNVT2(hoten2.Text);
+            if (kq == "oke")
+            {
+                button1.Enabled = true;
+                dataGridView1.DataSource = nvBLL.loadTNV2(hoten2.Text);
+            }
+            else
+            {
+                MessageBox.Show(kq);
+            }
         }
 
         private void huy2_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = temp;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            nvBLL a = new nvBLL();
+            DataTable temp = a.loadTNV2(hoten2.Text);
+            hoten.Text = temp.Rows[0]["HoTen"].ToString();
+            sdt.Text = temp.Rows[0]["SoDienThoai"].ToString();
+            chucvu.Text = temp.Rows[0]["ChucVu"].ToString();
+            diachi.Text = temp.Rows[0]["DiaChi"].ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(temp.Rows[0]["NgaySinh"]);
+            gioitinh.Text = temp.Rows[0]["GioiTinh"].ToString();
+            manv.Text = temp.Rows[0]["MaNhanVien"].ToString();
+            tengvHasValue = true;
+            them.Enabled = false;
+            xoa.Enabled = true;
+            chon.Enabled = true;
+            sua.Enabled = true;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                tengvHasValue = true;
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                manv.Text = row.Cells["MaNhanVien"].Value.ToString();
+                hoten.Text = row.Cells["HoTen"].Value.ToString();
+                sdt.Text = row.Cells["SoDienThoai"].Value.ToString();
+                chucvu.Text = row.Cells["ChucVu"].Value.ToString();
+                diachi.Text = row.Cells["DiaChi"].Value.ToString();
+                gioitinh.Text = row.Cells["GioiTinh"].Value.ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
+
+                them.Enabled = false;
+                sua.Enabled = true;
+                xoa.Enabled = true;
+
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -21,7 +21,7 @@ namespace GUI
             khAccess a = new khAccess();
             dataGridView1.DataSource = a.LoadKH2();
             sua.Enabled = false;
-            xoa.Enabled = false;
+            
             chon.Enabled = false;
         }
         public static string TaoMaKH()
@@ -49,6 +49,20 @@ namespace GUI
 
             return maKH;
         }
+        public void ClearAllTextBoxes(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Clear();
+                }
+                else if (c.Controls.Count > 0)
+                {
+                    ClearAllTextBoxes(c);
+                }
+            }
+        }
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
@@ -65,6 +79,7 @@ namespace GUI
             string kq = khBLL.themKH2(a);
             MessageBox.Show(kq);
             dataGridView1.DataSource = khBLL.LoadKH2();
+            ClearAllTextBoxes(this);
 
         }
 
@@ -84,7 +99,7 @@ namespace GUI
             textBox1.Clear();
             textBox2.Clear();
             sua.Enabled = false;
-            xoa.Enabled = false;
+            
             them.Enabled = true;
             chon.Enabled = false;
         }
@@ -114,6 +129,7 @@ namespace GUI
             MessageBox.Show(kq);
             dataGridView1.DataSource = khBLL2.LoadKH2();
             hoten.TextChanged += new EventHandler(hoten_TextChanged);
+            ClearAllTextBoxes(this);
         }
 
         private void chon_Click(object sender, EventArgs e)
@@ -121,7 +137,7 @@ namespace GUI
             hoten.TextChanged -= new EventHandler(hoten_TextChanged);
             textBox1.Text = textBox2.Text;
             sua.Enabled = true;
-            xoa.Enabled = true;
+            
             them.Enabled = false;
 
         }
@@ -138,6 +154,7 @@ namespace GUI
             string kq = a.xoaKH2(makh);
             MessageBox.Show(kq);
             dataGridView1.DataSource = a.LoadKH2();
+            ClearAllTextBoxes(this);
         }
     }
 }

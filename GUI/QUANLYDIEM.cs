@@ -1,5 +1,4 @@
 ﻿using BLL;
-using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+
 
 namespace GUI
 {
@@ -187,6 +188,7 @@ namespace GUI
             {
                 MessageBox.Show(kq);
                 clearAll(this);
+                dataGridView1.DataSource = diemBLL.loadDiem2();
                 chon.Enabled = false;
                 xoa.Enabled = false;
                 sua.Enabled = false;
@@ -196,6 +198,58 @@ namespace GUI
             {
                 MessageBox.Show(kq);
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                mahv.Text = row.Cells["MaHocVien"].Value.ToString();
+                mamon.Text = row.Cells["MaMonHoc"].Value.ToString();
+                kt1.Text = row.Cells["DiemKiemTra1"].Value.ToString();
+                kt2.Text = row.Cells["DiemKiemTra2"].Value.ToString();
+                diemthi.Text = row.Cells["DiemThi"].Value.ToString();
+                them.Enabled = false;
+                xoa.Enabled = true;
+                sua.Enabled = true;
+
+            }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.Rows[e.RowIndex].Selected = true;
+            DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+            mahv.Text = row.Cells["MaHocVien"].Value.ToString();
+            mamon.Text = row.Cells["MaMonHoc"].Value.ToString();
+            kt1.Text = row.Cells["DiemKiemTra1"].Value.ToString();
+            kt2.Text = row.Cells["DiemKiemTra2"].Value.ToString();
+            diemthi.Text = row.Cells["DiemThi"].Value.ToString();
+            them.Enabled = false;
+            xoa.Enabled = true;
+            sua.Enabled = true;
         }
     }
 }

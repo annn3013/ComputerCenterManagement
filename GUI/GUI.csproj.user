@@ -4,9 +4,6 @@
     <Compile Update="BIENLAI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CrystalReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Update="DOIPASS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,6 +11,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="HETHONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="INDIEM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LOGIN.cs">
@@ -41,6 +41,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="QUANLYNHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QUANLYPHONG.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="THONGKEDIEM.cs">

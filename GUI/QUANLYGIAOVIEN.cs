@@ -15,7 +15,7 @@ namespace GUI
 {
     public partial class QUANLYGIAOVIEN : Form
     {
-        private DataTable temp= new DataTable();
+        private DataTable temp = new DataTable();
         public QUANLYGIAOVIEN()
         {
             InitializeComponent();
@@ -27,11 +27,12 @@ namespace GUI
             gioitinh.SelectedIndex = 0;
             gvBLL gvBLL = new gvBLL();
             dataGridView1.DataSource = gvBLL.loadGV2();
-            temp= gvBLL.loadGV2();
+            temp = gvBLL.loadGV2();
             them.Enabled = true;
             xoa.Enabled = false;
             chon.Enabled = false;
             sua.Enabled = false;
+            button1.Enabled = false;
         }
         void clearAll(Control parent)
         {
@@ -84,7 +85,7 @@ namespace GUI
 
         private void chon_Click(object sender, EventArgs e)
         {
-            
+
             gvBLL a = new gvBLL();
             DataTable temp = a.loadGVT2(magv2.Text);
             hoten.Text = temp.Rows[0]["HoTen"].ToString();
@@ -92,7 +93,7 @@ namespace GUI
             chucvu.Text = temp.Rows[0]["ChucVu"].ToString();
             diachi.Text = temp.Rows[0]["DiaChi"].ToString();
             dateTimePicker1.Value = Convert.ToDateTime(temp.Rows[0]["NgaySinh"]);
-            gioitinh.Text= temp.Rows[0]["GioiTinh"].ToString();
+            gioitinh.Text = temp.Rows[0]["GioiTinh"].ToString();
             magv.Text = magv2.Text;
             tengvHasValue = true;
             them.Enabled = false;
@@ -104,7 +105,7 @@ namespace GUI
         private void huy_Click(object sender, EventArgs e)
         {
             clearAll(this);
-            gioitinh.Items.Clear();
+
             dateTimePicker1.Value = DateTime.Now;
             them.Enabled = true;
             xoa.Enabled = false;
@@ -121,7 +122,7 @@ namespace GUI
             {
                 chon.Enabled = true;
                 dataGridView1.DataSource = gvBLL.loadGVT2(magv2.Text);
-                
+
             }
             else
             {
@@ -146,10 +147,10 @@ namespace GUI
             {
                 MessageBox.Show(kq);
                 clearAll(this);
-                gioitinh.Items.Clear();
+
                 dateTimePicker1.Value = DateTime.Now;
                 dataGridView1.DataSource = gvBLL.loadGV2();
-                temp= gvBLL.loadGV2();
+                temp = gvBLL.loadGV2();
             }
             else
             {
@@ -171,8 +172,9 @@ namespace GUI
                 xoa.Enabled = false;
                 chon.Enabled = false;
                 sua.Enabled = false;
+                button1.Enabled = false;
                 dataGridView1.DataSource = gvBLL.loadGV2();
-                temp= gvBLL.loadGV2();
+                temp = gvBLL.loadGV2();
 
             }
             else
@@ -197,14 +199,15 @@ namespace GUI
             {
                 MessageBox.Show(kq);
                 clearAll(this);
-                gioitinh.Items.Clear();
+
                 dateTimePicker1.Value = DateTime.Now;
                 dataGridView1.DataSource = gvBLL.loadGV2();
-                temp= gvBLL.loadGV2();
+                temp = gvBLL.loadGV2();
                 them.Enabled = true;
                 xoa.Enabled = false;
                 chon.Enabled = false;
                 sua.Enabled = false;
+                button1.Enabled = false;
             }
             else
             {
@@ -220,9 +223,68 @@ namespace GUI
         private void tim2_Click(object sender, EventArgs e)
         {
             gvBLL gvBLL = new gvBLL();
-            dataGridView1.DataSource =gvBLL.loadTGV2(hoten2.Text);
+            string kq = gvBLL.checkGVT2(hoten2.Text);
+            if (kq == "giáo viên đã tồn tại trong cơ sở dữ liệu.")
+            {
+                button1.Enabled = true;
+                dataGridView1.DataSource = gvBLL.loadTGV2(hoten2.Text);
+            }
+            else
+            {
+                MessageBox.Show(kq);
+            }
 
         }
 
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            gvBLL a = new gvBLL();
+            DataTable temp = a.loadTGV2(hoten2.Text);
+            hoten.Text = temp.Rows[0]["HoTen"].ToString();
+            sdt.Text = temp.Rows[0]["SoDienThoai"].ToString();
+            chucvu.Text = temp.Rows[0]["ChucVu"].ToString();
+            diachi.Text = temp.Rows[0]["DiaChi"].ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(temp.Rows[0]["NgaySinh"]);
+            gioitinh.Text = temp.Rows[0]["GioiTinh"].ToString();
+            magv.Text = temp.Rows[0]["MaGiaoVien"].ToString();
+            tengvHasValue = true;
+            them.Enabled = false;
+            xoa.Enabled = true;
+            chon.Enabled = true;
+            sua.Enabled = true;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                tengvHasValue = true;
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                magv.Text = row.Cells["MaGiaoVien"].Value.ToString();
+                hoten.Text = row.Cells["HoTen"].Value.ToString();
+                sdt.Text = row.Cells["SoDienThoai"].Value.ToString();
+                chucvu.Text = row.Cells["ChucVu"].Value.ToString();
+                diachi.Text = row.Cells["DiaChi"].Value.ToString();
+                gioitinh.Text = row.Cells["GioiTinh"].Value.ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
+
+                them.Enabled = false;
+                sua.Enabled = true;
+                xoa.Enabled = true;
+
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

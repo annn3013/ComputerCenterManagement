@@ -47,57 +47,38 @@ C:\Users\admin\source\repos\CNPM\GUI\obj\Debug\net6.0-windows\GUI.THONGKEHOCPHI.
 C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\CrystalDecisions.ReportAppServer.CommLayer.dll
 C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\CrystalDecisions.ReportAppServer.Controllers.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\CrystalDecisions.ReportAppServer.CubeDefModel.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\CrystalDecisions.ReportAppServer.DataDefModel.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\CrystalDecisions.ReportAppServer.ReportDefModel.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\CrystalDecisions.Shared.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\log4net.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\cs\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\da\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\de\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\en\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\es\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\fi\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\fr\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\hu\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\it\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\ja\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\ko\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\nb-NO\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\nl\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\pl\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\pt\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\ru\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\sk\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\sv\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\th\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\tr\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\zh-CHS\CrystalDecisions.Shared.resources.dll
-C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\zh-CHT\CrystalDecisions.Shared.resources.dll
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.dll
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\refint\GUI.dll
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.pdb
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.csproj.AssemblyReference.cache
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.BIENLAI.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.DOIPASS.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.GHIDANH.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.HETHONG.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.LOGIN.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.Properties.Resources.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.QUANLYACC.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.QUANLYDIEM.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.QUANLYGIAOVIEN.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.QUANLYHOCVIEN.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.QUANLYKHOAHOC.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.QUANLYLOPHOC.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.QUANLYMONHOC.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.QUANLYNHANVIEN.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.THONGKEDIEM.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.THONGKEHOCPHI.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.XEPLOP.resources
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.csproj.GenerateResource.cache
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.GeneratedMSBuildEditorConfig.editorconfig
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.AssemblyInfoInputs.cache
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.AssemblyInfo.cs
-D:\Document\Môn CNPM\CNPM\GUI\obj\Debug\net6.0-windows\GUI.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\CNPM\GUI\obj\Debug\net6.0-windows\GUI.INDIEM.resources
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\Microsoft.ReportViewer.Common.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\Microsoft.ReportViewer.NETCore.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\Microsoft.ReportViewer.WinForms.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\cs\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\de\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\es\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\fr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\it\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\ja\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\ko\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\pl\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\pt-BR\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\ru\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\tr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\bin\Debug\net6.0-windows\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+C:\Users\admin\source\repos\CNPM\GUI\obj\Debug\net6.0-windows\GUI.QUANLYPHONG.resources

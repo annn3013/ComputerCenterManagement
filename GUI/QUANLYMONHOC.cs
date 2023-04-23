@@ -50,7 +50,7 @@ namespace GUI
 
         private void QUANLYMONHOC_Load(object sender, EventArgs e)
         {
-            mhBLL mhBLL=    new mhBLL();
+            mhBLL mhBLL = new mhBLL();
             temp = mhBLL.loadMH2();
         }
         private bool tenlopHasValue = false; // Biến để kiểm tra giá trị của tenlop
@@ -69,13 +69,14 @@ namespace GUI
 
         private void chon_Click(object sender, EventArgs e)
         {
+            tenlopHasValue = true;
             mamon.Text = mamon2.Text;
-            mhBLL a= new mhBLL();
+            mhBLL a = new mhBLL();
             DataTable temp = a.loadMHT2(mamon2.Text);
             tenmon.Text = temp.Rows[0]["TenMonHoc"].ToString();
             sobuoi.Text = temp.Rows[0]["SoBuoi"].ToString();
             hocphi.Text = temp.Rows[0]["HocPhi"].ToString();
-            makh.Text   =  temp.Rows[0]["MaKhoaHoc"].ToString();
+            makh.Text = temp.Rows[0]["MaKhoaHoc"].ToString();
             them.Enabled = false;
             xoa.Enabled = true;
             sua.Enabled = true;
@@ -139,7 +140,7 @@ namespace GUI
                 MessageBox.Show(kq);
                 clearAll(this);
                 dataGridView1.DataSource = mhBLL.loadMH2();
-                temp= mhBLL.loadMH2();
+                temp = mhBLL.loadMH2();
             }
             else
             {
@@ -170,7 +171,7 @@ namespace GUI
         {
             mhBLL mhBLL = new mhBLL();
             MonHoc a = new MonHoc();
-            string mm = mamon2.Text;
+            string mm = mamon.Text;
             a.MaMonHoc = mamon.Text;
             a.TenMonHoc = tenmon.Text;
             int value = 0;
@@ -216,7 +217,7 @@ namespace GUI
         private void xoa_Click(object sender, EventArgs e)
         {
             mhBLL mhBLL = new mhBLL();
-            string mm = mamon2.Text;
+            string mm = mamon.Text;
             string kq = mhBLL.xoaMH2(mm);
             if (kq == "Xóa môn học thành công")
             {
@@ -233,6 +234,30 @@ namespace GUI
             {
                 MessageBox.Show(kq);
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                tenlopHasValue = true;
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                tenmon.Text = row.Cells["TenMonHoc"].Value.ToString();
+                mamon.Text = row.Cells["MaMonHoc"].Value.ToString();
+                sobuoi.Text = row.Cells["SoBuoi"].Value.ToString();
+                hocphi.Text = row.Cells["HocPhi"].Value.ToString();
+                makh.Text = row.Cells["MaKhoaHoc"].Value.ToString();
+                them.Enabled = false;
+                xoa.Enabled = true;
+                sua.Enabled = true;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

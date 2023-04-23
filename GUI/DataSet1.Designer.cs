@@ -24,7 +24,7 @@ namespace GUI {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet1 : global::System.Data.DataSet {
         
-        private BANGDIEMDataTable tableBANGDIEM;
+        private DIEMHVDataTable tableDIEMHV;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace GUI {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["BANGDIEM"] != null)) {
-                    base.Tables.Add(new BANGDIEMDataTable(ds.Tables["BANGDIEM"]));
+                if ((ds.Tables["DIEMHV"] != null)) {
+                    base.Tables.Add(new DIEMHVDataTable(ds.Tables["DIEMHV"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace GUI {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BANGDIEMDataTable BANGDIEM {
+        public DIEMHVDataTable DIEMHV {
             get {
-                return this.tableBANGDIEM;
+                return this.tableDIEMHV;
             }
         }
         
@@ -152,8 +152,8 @@ namespace GUI {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["BANGDIEM"] != null)) {
-                    base.Tables.Add(new BANGDIEMDataTable(ds.Tables["BANGDIEM"]));
+                if ((ds.Tables["DIEMHV"] != null)) {
+                    base.Tables.Add(new DIEMHVDataTable(ds.Tables["DIEMHV"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace GUI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableBANGDIEM = ((BANGDIEMDataTable)(base.Tables["BANGDIEM"]));
+            this.tableDIEMHV = ((DIEMHVDataTable)(base.Tables["DIEMHV"]));
             if ((initTable == true)) {
-                if ((this.tableBANGDIEM != null)) {
-                    this.tableBANGDIEM.InitVars();
+                if ((this.tableDIEMHV != null)) {
+                    this.tableDIEMHV.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace GUI {
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableBANGDIEM = new BANGDIEMDataTable();
-            base.Tables.Add(this.tableBANGDIEM);
+            this.tableDIEMHV = new DIEMHVDataTable();
+            base.Tables.Add(this.tableDIEMHV);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeBANGDIEM() {
+        private bool ShouldSerializeDIEMHV() {
             return false;
         }
         
@@ -270,21 +270,33 @@ namespace GUI {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void BANGDIEMRowChangeEventHandler(object sender, BANGDIEMRowChangeEvent e);
+        public delegate void DIEMHVRowChangeEventHandler(object sender, DIEMHVRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class BANGDIEMDataTable : global::System.Data.TypedTableBase<BANGDIEMRow> {
+        public partial class DIEMHVDataTable : global::System.Data.TypedTableBase<DIEMHVRow> {
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnMaHocVien;
             
             private global::System.Data.DataColumn columnMaMonHoc;
             
+            private global::System.Data.DataColumn columnDiemKiemTra1;
+            
+            private global::System.Data.DataColumn columnDiemKiemTra2;
+            
+            private global::System.Data.DataColumn columnDiemThi;
+            
+            private global::System.Data.DataColumn columnDiemTrungBinh;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BANGDIEMDataTable() {
-                this.TableName = "BANGDIEM";
+            public DIEMHVDataTable() {
+                this.TableName = "DIEMHV";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +304,7 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal BANGDIEMDataTable(global::System.Data.DataTable table) {
+            internal DIEMHVDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,9 +321,25 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected BANGDIEMDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DIEMHVDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MaHocVienColumn {
+                get {
+                    return this.columnMaHocVien;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -319,6 +347,38 @@ namespace GUI {
             public global::System.Data.DataColumn MaMonHocColumn {
                 get {
                     return this.columnMaMonHoc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DiemKiemTra1Column {
+                get {
+                    return this.columnDiemKiemTra1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DiemKiemTra2Column {
+                get {
+                    return this.columnDiemKiemTra2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DiemThiColumn {
+                get {
+                    return this.columnDiemThi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DiemTrungBinhColumn {
+                get {
+                    return this.columnDiemTrungBinh;
                 }
             }
             
@@ -333,45 +393,51 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BANGDIEMRow this[int index] {
+            public DIEMHVRow this[int index] {
                 get {
-                    return ((BANGDIEMRow)(this.Rows[index]));
+                    return ((DIEMHVRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event BANGDIEMRowChangeEventHandler BANGDIEMRowChanging;
+            public event DIEMHVRowChangeEventHandler DIEMHVRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event BANGDIEMRowChangeEventHandler BANGDIEMRowChanged;
+            public event DIEMHVRowChangeEventHandler DIEMHVRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event BANGDIEMRowChangeEventHandler BANGDIEMRowDeleting;
+            public event DIEMHVRowChangeEventHandler DIEMHVRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event BANGDIEMRowChangeEventHandler BANGDIEMRowDeleted;
+            public event DIEMHVRowChangeEventHandler DIEMHVRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddBANGDIEMRow(BANGDIEMRow row) {
+            public void AddDIEMHVRow(DIEMHVRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BANGDIEMRow AddBANGDIEMRow(string MaMonHoc) {
-                BANGDIEMRow rowBANGDIEMRow = ((BANGDIEMRow)(this.NewRow()));
+            public DIEMHVRow AddDIEMHVRow(long ID, string MaHocVien, string MaMonHoc, double DiemKiemTra1, double DiemKiemTra2, double DiemThi, double DiemTrungBinh) {
+                DIEMHVRow rowDIEMHVRow = ((DIEMHVRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        MaMonHoc};
-                rowBANGDIEMRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBANGDIEMRow);
-                return rowBANGDIEMRow;
+                        ID,
+                        MaHocVien,
+                        MaMonHoc,
+                        DiemKiemTra1,
+                        DiemKiemTra2,
+                        DiemThi,
+                        DiemTrungBinh};
+                rowDIEMHVRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDIEMHVRow);
+                return rowDIEMHVRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                BANGDIEMDataTable cln = ((BANGDIEMDataTable)(base.Clone()));
+                DIEMHVDataTable cln = ((DIEMHVDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -379,46 +445,64 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new BANGDIEMDataTable();
+                return new DIEMHVDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnID = base.Columns["ID"];
+                this.columnMaHocVien = base.Columns["MaHocVien"];
                 this.columnMaMonHoc = base.Columns["MaMonHoc"];
+                this.columnDiemKiemTra1 = base.Columns["DiemKiemTra1"];
+                this.columnDiemKiemTra2 = base.Columns["DiemKiemTra2"];
+                this.columnDiemThi = base.Columns["DiemThi"];
+                this.columnDiemTrungBinh = base.Columns["DiemTrungBinh"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnMaHocVien = new global::System.Data.DataColumn("MaHocVien", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaHocVien);
                 this.columnMaMonHoc = new global::System.Data.DataColumn("MaMonHoc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaMonHoc);
+                this.columnDiemKiemTra1 = new global::System.Data.DataColumn("DiemKiemTra1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiemKiemTra1);
+                this.columnDiemKiemTra2 = new global::System.Data.DataColumn("DiemKiemTra2", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiemKiemTra2);
+                this.columnDiemThi = new global::System.Data.DataColumn("DiemThi", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiemThi);
+                this.columnDiemTrungBinh = new global::System.Data.DataColumn("DiemTrungBinh", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiemTrungBinh);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BANGDIEMRow NewBANGDIEMRow() {
-                return ((BANGDIEMRow)(this.NewRow()));
+            public DIEMHVRow NewDIEMHVRow() {
+                return ((DIEMHVRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new BANGDIEMRow(builder);
+                return new DIEMHVRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(BANGDIEMRow);
+                return typeof(DIEMHVRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.BANGDIEMRowChanged != null)) {
-                    this.BANGDIEMRowChanged(this, new BANGDIEMRowChangeEvent(((BANGDIEMRow)(e.Row)), e.Action));
+                if ((this.DIEMHVRowChanged != null)) {
+                    this.DIEMHVRowChanged(this, new DIEMHVRowChangeEvent(((DIEMHVRow)(e.Row)), e.Action));
                 }
             }
             
@@ -426,8 +510,8 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.BANGDIEMRowChanging != null)) {
-                    this.BANGDIEMRowChanging(this, new BANGDIEMRowChangeEvent(((BANGDIEMRow)(e.Row)), e.Action));
+                if ((this.DIEMHVRowChanging != null)) {
+                    this.DIEMHVRowChanging(this, new DIEMHVRowChangeEvent(((DIEMHVRow)(e.Row)), e.Action));
                 }
             }
             
@@ -435,8 +519,8 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.BANGDIEMRowDeleted != null)) {
-                    this.BANGDIEMRowDeleted(this, new BANGDIEMRowChangeEvent(((BANGDIEMRow)(e.Row)), e.Action));
+                if ((this.DIEMHVRowDeleted != null)) {
+                    this.DIEMHVRowDeleted(this, new DIEMHVRowChangeEvent(((DIEMHVRow)(e.Row)), e.Action));
                 }
             }
             
@@ -444,14 +528,14 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.BANGDIEMRowDeleting != null)) {
-                    this.BANGDIEMRowDeleting(this, new BANGDIEMRowChangeEvent(((BANGDIEMRow)(e.Row)), e.Action));
+                if ((this.DIEMHVRowDeleting != null)) {
+                    this.DIEMHVRowDeleting(this, new DIEMHVRowChangeEvent(((DIEMHVRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveBANGDIEMRow(BANGDIEMRow row) {
+            public void RemoveDIEMHVRow(DIEMHVRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -478,7 +562,7 @@ namespace GUI {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "BANGDIEMDataTable";
+                attribute2.FixedValue = "DIEMHVDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -522,15 +606,47 @@ namespace GUI {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class BANGDIEMRow : global::System.Data.DataRow {
+        public partial class DIEMHVRow : global::System.Data.DataRow {
             
-            private BANGDIEMDataTable tableBANGDIEM;
+            private DIEMHVDataTable tableDIEMHV;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal BANGDIEMRow(global::System.Data.DataRowBuilder rb) : 
+            internal DIEMHVRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableBANGDIEM = ((BANGDIEMDataTable)(this.Table));
+                this.tableDIEMHV = ((DIEMHVDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public long ID {
+                get {
+                    try {
+                        return ((long)(this[this.tableDIEMHV.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID\' in table \'DIEMHV\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDIEMHV.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MaHocVien {
+                get {
+                    try {
+                        return ((string)(this[this.tableDIEMHV.MaHocVienColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaHocVien\' in table \'DIEMHV\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDIEMHV.MaHocVienColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -538,27 +654,163 @@ namespace GUI {
             public string MaMonHoc {
                 get {
                     try {
-                        return ((string)(this[this.tableBANGDIEM.MaMonHocColumn]));
+                        return ((string)(this[this.tableDIEMHV.MaMonHocColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MaMonHoc\' in table \'BANGDIEM\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaMonHoc\' in table \'DIEMHV\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBANGDIEM.MaMonHocColumn] = value;
+                    this[this.tableDIEMHV.MaMonHocColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double DiemKiemTra1 {
+                get {
+                    try {
+                        return ((double)(this[this.tableDIEMHV.DiemKiemTra1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DiemKiemTra1\' in table \'DIEMHV\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDIEMHV.DiemKiemTra1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double DiemKiemTra2 {
+                get {
+                    try {
+                        return ((double)(this[this.tableDIEMHV.DiemKiemTra2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DiemKiemTra2\' in table \'DIEMHV\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDIEMHV.DiemKiemTra2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double DiemThi {
+                get {
+                    try {
+                        return ((double)(this[this.tableDIEMHV.DiemThiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DiemThi\' in table \'DIEMHV\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDIEMHV.DiemThiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double DiemTrungBinh {
+                get {
+                    try {
+                        return ((double)(this[this.tableDIEMHV.DiemTrungBinhColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DiemTrungBinh\' in table \'DIEMHV\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDIEMHV.DiemTrungBinhColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableDIEMHV.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetIDNull() {
+                this[this.tableDIEMHV.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMaHocVienNull() {
+                return this.IsNull(this.tableDIEMHV.MaHocVienColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMaHocVienNull() {
+                this[this.tableDIEMHV.MaHocVienColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMaMonHocNull() {
-                return this.IsNull(this.tableBANGDIEM.MaMonHocColumn);
+                return this.IsNull(this.tableDIEMHV.MaMonHocColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetMaMonHocNull() {
-                this[this.tableBANGDIEM.MaMonHocColumn] = global::System.Convert.DBNull;
+                this[this.tableDIEMHV.MaMonHocColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDiemKiemTra1Null() {
+                return this.IsNull(this.tableDIEMHV.DiemKiemTra1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDiemKiemTra1Null() {
+                this[this.tableDIEMHV.DiemKiemTra1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDiemKiemTra2Null() {
+                return this.IsNull(this.tableDIEMHV.DiemKiemTra2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDiemKiemTra2Null() {
+                this[this.tableDIEMHV.DiemKiemTra2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDiemThiNull() {
+                return this.IsNull(this.tableDIEMHV.DiemThiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDiemThiNull() {
+                this[this.tableDIEMHV.DiemThiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDiemTrungBinhNull() {
+                return this.IsNull(this.tableDIEMHV.DiemTrungBinhColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDiemTrungBinhNull() {
+                this[this.tableDIEMHV.DiemTrungBinhColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -566,22 +818,22 @@ namespace GUI {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class BANGDIEMRowChangeEvent : global::System.EventArgs {
+        public class DIEMHVRowChangeEvent : global::System.EventArgs {
             
-            private BANGDIEMRow eventRow;
+            private DIEMHVRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BANGDIEMRowChangeEvent(BANGDIEMRow row, global::System.Data.DataRowAction action) {
+            public DIEMHVRowChangeEvent(DIEMHVRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BANGDIEMRow Row {
+            public DIEMHVRow Row {
                 get {
                     return this.eventRow;
                 }

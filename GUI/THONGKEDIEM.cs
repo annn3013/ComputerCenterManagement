@@ -29,14 +29,14 @@ namespace GUI
         {
             diemBLL diemBLL = new diemBLL();
             dataGridView1.DataSource = diemBLL.loadDiem2();
-            yeu2.Enabled= false;
-            yeu3.Enabled    = false;
+            yeu2.Enabled = false;
+            yeu3.Enabled = false;
             tb2.Enabled = false;
             tb3.Enabled = false;
             kha2.Enabled = false;
-            kha3.Enabled    = false;
-            gioi2.Enabled   = false;
-            gioi3.Enabled   = false;
+            kha3.Enabled = false;
+            gioi2.Enabled = false;
+            gioi3.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,8 +48,8 @@ namespace GUI
                 dataGridView1.DataSource = diemBLL2.hienDiemM2(mamon.Text);
                 yeu3.Enabled = true;
                 tb3.Enabled = true;
-                kha3.Enabled    = true;
-                gioi3.Enabled   = true;
+                kha3.Enabled = true;
+                gioi3.Enabled = true;
             }
             else
             {
@@ -270,6 +270,37 @@ namespace GUI
             {
                 MessageBox.Show(kq);
             }
+        }
+
+        private void in2_Click(object sender, EventArgs e)
+        {
+            diemBLL diemBLL2 = new diemBLL();
+            string kq = diemBLL2.checkDiem2(mahv.Text);
+            if (kq == "có")
+            {
+                this.Hide();
+                INDIEM iNDIEM = new INDIEM(mahv.Text);
+                iNDIEM.Show();
+            }
+            else
+            {
+                MessageBox.Show(kq);
+            }
+
+        }
+
+        private void in1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mamon.Clear();
+            mahv.Clear();
+            diemBLL diemBLL = new diemBLL();
+            dataGridView1.DataSource = diemBLL.loadDiem2();
+
         }
     }
 }

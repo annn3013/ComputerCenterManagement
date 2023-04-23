@@ -62,7 +62,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(654, 9);
+            label1.Location = new Point(702, 9);
             label1.Name = "label1";
             label1.Size = new Size(199, 30);
             label1.TabIndex = 0;
@@ -71,28 +71,30 @@
             // groupBox2
             // 
             groupBox2.Anchor = AnchorStyles.Top;
+            groupBox2.BackColor = SystemColors.GradientActiveCaption;
             groupBox2.Controls.Add(dataGridView2);
             groupBox2.Controls.Add(comboBox1);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(chon2);
-            groupBox2.Location = new Point(736, 42);
+            groupBox2.Location = new Point(797, 42);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(746, 356);
+            groupBox2.Size = new Size(669, 356);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Lớp Học";
             // 
             // dataGridView2
             // 
-            dataGridView2.Anchor = AnchorStyles.Top;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.BackgroundColor = SystemColors.GradientInactiveCaption;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Dock = DockStyle.Bottom;
             dataGridView2.GridColor = SystemColors.Control;
-            dataGridView2.Location = new Point(0, 87);
+            dataGridView2.Location = new Point(3, 84);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(746, 262);
+            dataGridView2.Size = new Size(663, 269);
             dataGridView2.TabIndex = 7;
             // 
             // comboBox1
@@ -106,9 +108,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(16, 25);
             label2.Name = "label2";
-            label2.Size = new Size(72, 15);
+            label2.Size = new Size(73, 15);
             label2.TabIndex = 0;
             label2.Text = "Mã Lớp Học";
             // 
@@ -125,13 +128,14 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top;
+            groupBox1.BackColor = SystemColors.GradientActiveCaption;
             groupBox1.Controls.Add(tim);
             groupBox1.Controls.Add(mahv);
             groupBox1.Controls.Add(huy);
             groupBox1.Controls.Add(chon);
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Controls.Add(label3);
-            groupBox1.Location = new Point(37, 42);
+            groupBox1.Location = new Point(114, 42);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(666, 356);
             groupBox1.TabIndex = 3;
@@ -178,23 +182,25 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.GradientInactiveCaption;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Bottom;
             dataGridView1.GridColor = SystemColors.Control;
-            dataGridView1.Location = new Point(0, 87);
+            dataGridView1.Location = new Point(3, 84);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(666, 262);
+            dataGridView1.Size = new Size(660, 269);
             dataGridView1.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(5, 28);
             label3.Name = "label3";
-            label3.Size = new Size(75, 15);
+            label3.Size = new Size(77, 15);
             label3.TabIndex = 2;
             label3.Text = "Mã Học Viên";
             // 
@@ -207,15 +213,16 @@
             // groupBox3
             // 
             groupBox3.Anchor = AnchorStyles.Top;
+            groupBox3.BackColor = SystemColors.GradientActiveCaption;
             groupBox3.Controls.Add(xoa);
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(label4);
             groupBox3.Controls.Add(textBox2);
             groupBox3.Controls.Add(textBox1);
             groupBox3.Controls.Add(dataGridView3);
-            groupBox3.Location = new Point(37, 422);
+            groupBox3.Location = new Point(114, 413);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(1445, 401);
+            groupBox3.Size = new Size(1352, 319);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
             groupBox3.Text = "Danh Sách Ghi Danh";
@@ -233,18 +240,20 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label5.Location = new Point(374, 30);
             label5.Name = "label5";
-            label5.Size = new Size(72, 15);
+            label5.Size = new Size(73, 15);
             label5.TabIndex = 9;
             label5.Text = "Mã Lớp Học";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(66, 30);
             label4.Name = "label4";
-            label4.Size = new Size(75, 15);
+            label4.Size = new Size(77, 15);
             label4.TabIndex = 8;
             label4.Text = "Mã Học Viên";
             // 
@@ -264,22 +273,24 @@
             // 
             // dataGridView3
             // 
-            dataGridView3.Anchor = AnchorStyles.Top;
             dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView3.BackgroundColor = SystemColors.GradientInactiveCaption;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Dock = DockStyle.Bottom;
             dataGridView3.GridColor = SystemColors.Control;
-            dataGridView3.Location = new Point(-1, 60);
+            dataGridView3.Location = new Point(3, 56);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
             dataGridView3.RowTemplate.Height = 25;
-            dataGridView3.Size = new Size(1445, 335);
+            dataGridView3.Size = new Size(1346, 260);
             dataGridView3.TabIndex = 5;
             // 
             // GHIDANH
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1540, 845);
+            BackColor = SystemColors.GradientInactiveCaption;
+            ClientSize = new Size(1540, 776);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);

@@ -25,15 +25,23 @@ namespace GUI
             InitializeComponent();
             this.tentaikhoan = tentaikhoan;
             this.matkhau = matkhau;
-            matkhaucuTxt.UseSystemPasswordChar = true;
-            matkhaumoiTxt.UseSystemPasswordChar = true;
-            xacnhanTxt.UseSystemPasswordChar = true;
         }
 
 
         private void DOIPASS_Load(object sender, EventArgs e)
         {
-
+            if (!checkBox1.Checked)
+            {
+                matkhaucuTxt.UseSystemPasswordChar = false;
+                matkhaumoiTxt.UseSystemPasswordChar = false;
+                xacnhanTxt.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                matkhaucuTxt.UseSystemPasswordChar = true;
+                matkhaumoiTxt.UseSystemPasswordChar = true;
+                xacnhanTxt.UseSystemPasswordChar = true;
+            }
         }
 
 
@@ -51,6 +59,8 @@ namespace GUI
                 matkhaumoiTxt.UseSystemPasswordChar = true;
                 xacnhanTxt.UseSystemPasswordChar = true;
             }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

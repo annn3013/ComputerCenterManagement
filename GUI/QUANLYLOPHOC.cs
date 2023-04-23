@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GUI
 {
     public partial class QUANLYLOPHOC : Form
@@ -105,9 +106,11 @@ namespace GUI
                 malop.Text = malop2.Text;
                 button2.Enabled = true;
                 dataGridView1.DataSource = lhBLL.loadLHT2(malop.Text);
+                button2.Enabled = true;
             }
             else
             {
+                button2.Enabled = false;
                 MessageBox.Show(kq);
             }
 
@@ -174,6 +177,7 @@ namespace GUI
 
             if (kq == "Sửa lớp học thành công")
             {
+                tenlopHasValue = false;
                 MessageBox.Show(kq);
                 malop.Clear();
                 tenlop.Clear();
@@ -191,6 +195,8 @@ namespace GUI
             }
             else
             {
+                tenlopHasValue = false;
+
                 MessageBox.Show(kq);
             }
 
@@ -199,18 +205,21 @@ namespace GUI
         private void xoa_Click(object sender, EventArgs e)
         {
             lhBLL lhBLL = new lhBLL();
-            string malh = malop2.Text;
+            string malh = malop.Text;
             string kq = lhBLL.xoaLH2(malh);
             if (kq == "Xóa lớp học thành công")
             {
+                tenlopHasValue = false;
                 MessageBox.Show(kq);
                 dataGridView1.DataSource = lhBLL.loadLH2();
                 them.Enabled = true;
                 xoa.Enabled = false;
                 sua.Enabled = false;
+                ClearAllTextBoxes(this);
             }
             else
             {
+                tenlopHasValue = false;
                 MessageBox.Show(kq);
             }
         }
@@ -223,6 +232,28 @@ namespace GUI
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                tenlopHasValue = true;
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                malop.Text= row.Cells["MaLopHoc"].Value.ToString();
+                tenlop.Text = row.Cells["TenLopHoc"].Value.ToString();
+                siso.Text = row.Cells["SiSo"].Value.ToString();
+                maphong.Text = row.Cells["MaPhongHoc"].Value.ToString();
+                mamon.Text = row.Cells["MaMonHoc"].Value.ToString();
+                ca.Text = row.Cells["CaHoc"].Value.ToString();
+                ngaybatdau.Value = Convert.ToDateTime(row.Cells["NgayBatDau"].Value);
+                ngayketthuc.Value = Convert.ToDateTime(row.Cells["NgayKetThuc"].Value);
+                them.Enabled = false;
+                xoa.Enabled = true;
+                sua.Enabled = true;
+
+            }
         }
     }
 }

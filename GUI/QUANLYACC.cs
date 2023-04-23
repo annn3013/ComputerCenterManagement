@@ -264,6 +264,8 @@ namespace GUI
             dataGridView2.Rows.Clear();
             maTKtextBox.Clear();
             timkiemTextBox1.Clear();
+            tkTextBox.Clear();
+            mkTextBox.Clear();
             button4.Enabled = false;
             button6.Enabled = false;
             button1.Enabled = true;
@@ -276,6 +278,48 @@ namespace GUI
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+                tkTextBox.TextChanged -= UpdateMaTK;
+                mkTextBox.TextChanged -= UpdateMaTK;
+                comboBox1.TextChanged -= UpdateMaTK;
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                tkTextBox.Text = row.Cells["TenTaiKhoan"].Value.ToString();
+                mkTextBox.Text = row.Cells["MatKhau"].Value.ToString();
+                maTKtextBox.Text = row.Cells["MaTaiKhoan"].Value.ToString();
+                button6.Enabled = true;
+                button5.Enabled = true;
+
+            }
+        }
+
+        private void tkTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+                tkTextBox.TextChanged -= UpdateMaTK;
+                mkTextBox.TextChanged -= UpdateMaTK;
+                comboBox1.TextChanged -= UpdateMaTK;
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                tkTextBox.Text = row.Cells["TenTaiKhoan"].Value.ToString();
+                mkTextBox.Text = row.Cells["MatKhau"].Value.ToString();
+                maTKtextBox.Text = row.Cells["MaTaiKhoan"].Value.ToString();
+                button1.Enabled = false;
+                button6.Enabled = true;
+                button5.Enabled = true;
+
+            }
         }
     }
 }

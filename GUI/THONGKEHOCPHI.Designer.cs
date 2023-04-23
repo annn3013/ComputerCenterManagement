@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
+            cancel = new Button();
             groupBox2 = new GroupBox();
             dongdu2 = new Button();
             dongdu = new Button();
@@ -43,7 +44,6 @@
             hoten = new TextBox();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            cancel = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -54,31 +54,41 @@
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(520, 7);
+            label1.Location = new Point(594, 9);
             label1.Name = "label1";
-            label1.Size = new Size(242, 32);
+            label1.Size = new Size(302, 41);
             label1.TabIndex = 0;
             label1.Text = "THỐNG KÊ HỌC PHÍ";
             // 
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top;
+            groupBox1.BackColor = SystemColors.GradientActiveCaption;
             groupBox1.Controls.Add(cancel);
             groupBox1.Controls.Add(groupBox2);
             groupBox1.Controls.Add(tim);
             groupBox1.Controls.Add(hoten);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(73, 62);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Location = new Point(83, 83);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(1141, 164);
+            groupBox1.Size = new Size(1304, 219);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // cancel
+            // 
+            cancel.Location = new Point(440, 20);
+            cancel.Name = "cancel";
+            cancel.Size = new Size(94, 29);
+            cancel.TabIndex = 8;
+            cancel.Text = "CANCEL";
+            cancel.UseVisualStyleBackColor = true;
+            cancel.Click += cancel_Click;
+            // 
             // groupBox2
             // 
+            groupBox2.BackColor = SystemColors.ActiveCaption;
             groupBox2.Controls.Add(dongdu2);
             groupBox2.Controls.Add(dongdu);
             groupBox2.Controls.Add(dongthieu);
@@ -87,20 +97,17 @@
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(label3);
-            groupBox2.Location = new Point(27, 58);
-            groupBox2.Margin = new Padding(3, 2, 3, 2);
+            groupBox2.Location = new Point(31, 77);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(628, 86);
+            groupBox2.Size = new Size(718, 115);
             groupBox2.TabIndex = 7;
             groupBox2.TabStop = false;
             // 
             // dongdu2
             // 
-            dongdu2.Location = new Point(508, 44);
-            dongdu2.Margin = new Padding(3, 2, 3, 2);
+            dongdu2.Location = new Point(581, 59);
             dongdu2.Name = "dongdu2";
-            dongdu2.Size = new Size(82, 28);
+            dongdu2.Size = new Size(94, 37);
             dongdu2.TabIndex = 9;
             dongdu2.Text = "HIỆN";
             dongdu2.UseVisualStyleBackColor = true;
@@ -108,10 +115,9 @@
             // 
             // dongdu
             // 
-            dongdu.Location = new Point(358, 44);
-            dongdu.Margin = new Padding(3, 2, 3, 2);
+            dongdu.Location = new Point(409, 59);
             dongdu.Name = "dongdu";
-            dongdu.Size = new Size(82, 28);
+            dongdu.Size = new Size(94, 37);
             dongdu.TabIndex = 8;
             dongdu.Text = "HIỆN";
             dongdu.UseVisualStyleBackColor = true;
@@ -119,10 +125,9 @@
             // 
             // dongthieu
             // 
-            dongthieu.Location = new Point(183, 44);
-            dongthieu.Margin = new Padding(3, 2, 3, 2);
+            dongthieu.Location = new Point(209, 59);
             dongthieu.Name = "dongthieu";
-            dongthieu.Size = new Size(82, 28);
+            dongthieu.Size = new Size(94, 37);
             dongthieu.TabIndex = 7;
             dongthieu.Text = "HIỆN";
             dongthieu.UseVisualStyleBackColor = true;
@@ -131,18 +136,18 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(508, 17);
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(581, 23);
             label6.Name = "label6";
-            label6.Size = new Size(53, 15);
+            label6.Size = new Size(70, 20);
             label6.TabIndex = 4;
             label6.Text = "Đóng dư";
             // 
             // chuadong
             // 
-            chuadong.Location = new Point(27, 44);
-            chuadong.Margin = new Padding(3, 2, 3, 2);
+            chuadong.Location = new Point(31, 59);
             chuadong.Name = "chuadong";
-            chuadong.Size = new Size(82, 28);
+            chuadong.Size = new Size(94, 37);
             chuadong.TabIndex = 6;
             chuadong.Text = "HIỆN";
             chuadong.UseVisualStyleBackColor = true;
@@ -151,36 +156,38 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(358, 17);
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(409, 23);
             label5.Name = "label5";
-            label5.Size = new Size(54, 15);
+            label5.Size = new Size(71, 20);
             label5.TabIndex = 3;
             label5.Text = "Đóng Đủ";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(183, 17);
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(209, 23);
             label4.Name = "label4";
-            label4.Size = new Size(66, 15);
+            label4.Size = new Size(87, 20);
             label4.TabIndex = 2;
             label4.Text = "Đóng thiếu";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(27, 17);
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(31, 23);
             label3.Name = "label3";
-            label3.Size = new Size(67, 15);
+            label3.Size = new Size(87, 20);
             label3.TabIndex = 1;
             label3.Text = "Chưa Đóng";
             // 
             // tim
             // 
-            tim.Location = new Point(260, 18);
-            tim.Margin = new Padding(3, 2, 3, 2);
+            tim.Location = new Point(297, 24);
             tim.Name = "tim";
-            tim.Size = new Size(82, 22);
+            tim.Size = new Size(94, 29);
             tim.TabIndex = 2;
             tim.Text = "TÌM";
             tim.UseVisualStyleBackColor = true;
@@ -188,18 +195,18 @@
             // 
             // hoten
             // 
-            hoten.Location = new Point(122, 20);
-            hoten.Margin = new Padding(3, 2, 3, 2);
+            hoten.Location = new Point(139, 27);
             hoten.Name = "hoten";
-            hoten.Size = new Size(110, 23);
+            hoten.Size = new Size(125, 27);
             hoten.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(35, 22);
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(40, 29);
             label2.Name = "label2";
-            label2.Size = new Size(76, 15);
+            label2.Size = new Size(100, 20);
             label2.TabIndex = 0;
             label2.Text = "Tên Học Viên";
             label2.Click += label2_Click;
@@ -207,36 +214,25 @@
             // dataGridView1
             // 
             dataGridView1.Anchor = AnchorStyles.Top;
+            dataGridView1.BackgroundColor = SystemColors.GradientInactiveCaption;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(73, 255);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Location = new Point(83, 340);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1141, 544);
+            dataGridView1.Size = new Size(1304, 725);
             dataGridView1.TabIndex = 2;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // cancel
-            // 
-            cancel.Location = new Point(385, 15);
-            cancel.Margin = new Padding(3, 2, 3, 2);
-            cancel.Name = "cancel";
-            cancel.Size = new Size(82, 22);
-            cancel.TabIndex = 8;
-            cancel.Text = "CANCEL";
-            cancel.UseVisualStyleBackColor = true;
-            cancel.Click += cancel_Click;
-            // 
             // THONGKEHOCPHI
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1269, 634);
+            BackColor = SystemColors.GradientInactiveCaption;
+            ClientSize = new Size(1450, 845);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
             Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "THONGKEHOCPHI";
             Text = "THONGKEHOCPHI";
             Load += THONGKEHOCPHI_Load;

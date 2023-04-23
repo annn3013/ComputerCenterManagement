@@ -100,12 +100,14 @@ namespace GUI
             string kq = blBLL.suaBL2(bl);
             if (kq == "Cập nhật thông tin Biên Lai thành công")
             {
+                clearAll(this);
                 dataGridView1.DataSource = blBLL.loadBL2();
                 dtTemp = blBLL.loadBL2();
                 sua.Enabled = false;
                 xoa.Enabled = false;
                 xacnhan.Enabled = true;
                 clearAll(this);
+                MessageBox.Show(kq);
 
             }
             else
@@ -122,6 +124,7 @@ namespace GUI
             string kq = blBLL.xoaBL2(ID);
             if (kq == "xóa biên lai thành công")
             {
+                clearAll(this);
                 dataGridView1.DataSource = blBLL.loadBL2();
                 dtTemp = blBLL.loadBL2();
                 sua.Enabled = false;
@@ -135,10 +138,17 @@ namespace GUI
 
         private void chon_Click(object sender, EventArgs e)
         {
-            blBLL blBLL =     new blBLL();
+            blBLL blBLL = new blBLL();
             string kq = blBLL.CheckMBL2(id.Text);
-            if(kq== "ID đã tồn tại trong bảng BiênLai")
+            if (kq == "ID đã tồn tại trong bảng BiênLai")
             {
+
+                DataTable temp = blBLL.loadBLID2(id.Text);
+
+                nguoidong.Text = temp.Rows[0]["TenNguoiDong"].ToString();
+                mahv.Text = temp.Rows[0]["MaHocVien"].ToString();
+                sotien.Text = temp.Rows[0]["SoTien"].ToString();
+                ngaydong.Value = Convert.ToDateTime(temp.Rows[0]["NgayDong"]);
                 xacnhan.Enabled = false;
                 sua.Enabled = true;
                 xoa.Enabled = true;
@@ -167,6 +177,25 @@ namespace GUI
         private void huy_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = dtTemp;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                id.Text = row.Cells["ID"].Value.ToString();
+                nguoidong.Text = row.Cells["TenNguoiDong"].Value.ToString();
+                mahv.Text = row.Cells["MaHocVien"].Value.ToString();
+                sotien.Text = row.Cells["Sotien"].Value.ToString();
+                ngaydong.Value = Convert.ToDateTime(row.Cells["NgayDong"].Value);
+                xacnhan.Enabled = false;
+                sua.Enabled = true;
+                xoa.Enabled = true;
+
+            }
         }
     }
 }

@@ -62,10 +62,10 @@ namespace GUI
                     {
                         item.Visible = false;
                     }
-                    timHocVienTS.Visible = true;
-                    timLopHocTS.Visible = true;
-                    timMonHocTS.Visible = true;
-                    thongkeTS.Visible = false;
+
+                    timkiemTS.Visible=false;
+                    thongkeHPTS.Visible = true;
+                    thongkeDSTS.Visible = false;
                     xepLopTS.Visible = false;
                     QUANLYHOCVIEN qUANLYHOCVIEN = new QUANLYHOCVIEN();
                     OPEN(qUANLYHOCVIEN);
@@ -77,9 +77,8 @@ namespace GUI
                     updateBienLaiTS.Visible = false;
                     ghidanhTS.Visible = false;
                     thongkeHPTS.Visible = false;
-                    timHocVienTS.Visible = false;
-                    timGiaoVienTS.Visible = false;
-                    timNhanVienTS.Visible = false;
+                    timkiemTS.Visible = false;
+
                     updateNhanVienTS.Visible = false;
                     updateGiaoVienTS.Visible = false;
                     QUANLYLOPHOC qUANLYLOPHOC = new QUANLYLOPHOC();
@@ -97,8 +96,7 @@ namespace GUI
                     {
                         item.Visible = false;
                     }
-                    timNhanVienTS.Visible = true;
-                    timGiaoVienTS.Visible = true;
+                    timkiemTS.Visible = false;
                     thongkeTS.Visible = false;
                     ghidanhTS.Visible = false;
                     xepLopTS.Visible = false;
@@ -116,8 +114,7 @@ namespace GUI
                     {
                         item.Visible = false;
                     }
-                    timNhanVienTS.Visible = true;
-                    timGiaoVienTS.Visible = true;
+                    timkiemTS.Visible = false;
                     thongkeTS.Visible = false;
                     ghidanhTS.Visible = false;
                     xepLopTS.Visible = false;
@@ -246,9 +243,8 @@ namespace GUI
 
         private void updateBienLaiTS_Click(object sender, EventArgs e)
         {
-            BIENLAI bIENLAI    = new BIENLAI();
+            BIENLAI bIENLAI = new BIENLAI();
             OPEN(bIENLAI);
         }
     }
 }
-    
