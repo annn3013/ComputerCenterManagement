@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="BIENLAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CrystalReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="DOIPASS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GHIDANH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HETHONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QUANLYACC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QUANLYDIEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QUANLYGIAOVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QUANLYHOCVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QUANLYKHOAHOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QUANLYLOPHOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QUANLYMONHOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QUANLYNHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="THONGKEDIEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="THONGKEHOCPHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="XEPLOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DataSet1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+</Project>
