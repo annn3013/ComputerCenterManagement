@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "8q4dgl7XrFVrkLcqCIs6HwZmp6URKhYsUQzE/9/xMnl4R/rP7Gi+t0liVS9ZXegCD8DgS8J44bYchXeM+cRd6g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\source\\repos\\CNPM\\BLL\\BLL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\crystaldecisions.crystalreports.engine\\1.0.0\\crystaldecisions.crystalreports.engine.1.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\crystalreports.reportappserver.commlayer\\13.0.4003\\crystalreports.reportappserver.commlayer.13.0.4003.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\crystalreports.reportappserver.commonobjectmodel\\13.0.4003\\crystalreports.reportappserver.commonobjectmodel.13.0.4003.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512"
+  ],
+  "logs": []
+}

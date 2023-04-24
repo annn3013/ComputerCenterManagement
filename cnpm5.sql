@@ -375,25 +375,8 @@ BEGIN
         DELETE FROM HP WHERE MaHocVien = @MaHocVien
     END
 END
-go
-CREATE TRIGGER trig_xoa_tthp
-ON TinhTrangHocPhi
-INSTEAD OF DELETE
-AS
-BEGIN
-    DECLARE @MaHocVien VARCHAR(50)
 
-    IF (SELECT COUNT(*) FROM deleted) > 0
-    BEGIN
-        SELECT @MaHocVien = MaHocVien FROM deleted
 
-        -- Xóa bản ghi trong bảng HP có MaHocVien trùng với MaHocVien bị xóa trong bảng TinhTrangHocPhi
-        DELETE FROM HP WHERE MaHocVien = @MaHocVien
-
-        -- Tiếp tục xóa bản ghi trong bảng TinhTrangHocPhi
-        DELETE FROM TinhTrangHocPhi WHERE MaHocVien = @MaHocVien
-    END
-END
 GO
 CREATE TRIGGER trig_cap_nhat_hp2
 ON BienLai

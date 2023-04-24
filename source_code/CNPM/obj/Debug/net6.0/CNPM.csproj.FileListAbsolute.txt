@@ -1,0 +1,15 @@
+C:\Users\admin\source\repos\CNPM\CNPM\bin\Debug\net6.0\CNPM.exe
+C:\Users\admin\source\repos\CNPM\CNPM\bin\Debug\net6.0\CNPM.deps.json
+C:\Users\admin\source\repos\CNPM\CNPM\bin\Debug\net6.0\CNPM.runtimeconfig.json
+C:\Users\admin\source\repos\CNPM\CNPM\bin\Debug\net6.0\CNPM.dll
+C:\Users\admin\source\repos\CNPM\CNPM\bin\Debug\net6.0\CNPM.pdb
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\CNPM.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\CNPM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\CNPM.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\CNPM.AssemblyInfo.cs
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\CNPM.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\CNPM.dll
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\refint\CNPM.dll
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\CNPM.pdb
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\CNPM.genruntimeconfig.cache
+C:\Users\admin\source\repos\CNPM\CNPM\obj\Debug\net6.0\ref\CNPM.dll

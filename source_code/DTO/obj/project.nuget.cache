@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "pVrcO9hjDUj5znvy58LmK3D4X9oVz1Ip4IzgKqypzsav09hzzOy7EdPBp8fp7/smWfU6FuVZM+FOWnBHRJjrUg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\source\\repos\\CNPM\\DTO\\DTO.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\crystaldecisions.crystalreports.engine\\1.0.0\\crystaldecisions.crystalreports.engine.1.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\crystalreports.reportappserver.commlayer\\13.0.4003\\crystalreports.reportappserver.commlayer.13.0.4003.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\crystalreports.reportappserver.commonobjectmodel\\13.0.4003\\crystalreports.reportappserver.commonobjectmodel.13.0.4003.nupkg.sha512"
+  ],
+  "logs": []
+}

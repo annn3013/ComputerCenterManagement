@@ -1,0 +1,118 @@
+INSERT INTO HocVien (MaHocVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, NgheNghiep) VALUES
+					('HV001', N'Nguyễn A', N'Nam', '2020-10-01', N'Quận 1, TpHCM', N'0123456789', N'Sinh viên'),
+					('HV002', N'Nguyễn B', N'Nữ', '2003-12-30', N'Quận 2, Long An', N'0123456789', N'Nhân viên'),
+					('HV003', N'Nguyễn C', N'Nam', '2010-03-21', N'Quận 3, Bình Dương', N'0123456789', N'Công nhân'),
+					('HV004', N'Nguyễn D', N'Nữ', '2013-07-15', N'Quận 4, TpHCM', N'0123456789', N'Sinh viên'),
+					('HV005', N'Nguyễn E', N'Nữ', '2003-01-25', N'Quận 4, Đồng Tháp', N'0123456789', N'Sinh viên'),
+					('HV006', N'Nguyễn F', N'Nam', '2004-02-10', N'Quận 7, Tiền Giang', N'0123456789', N'Sinh viên'),
+					('HV007', N'Nguyễn G', N'Nữ', '2007-04-12', N'Quận 9, TpHCM', N'0123456789', N'Sinh viên'),
+					('HV008', N'Nguyễn H', N'Nam', '2011-07-05', N'Quận 4, TpHCM', N'0123456789', N'Sinh viên'),
+					('HV009', N'Nguyễn I', N'Nam', '2008-06-11', N'Quận 1, Kiên Giang', N'0123456789', N'Sinh viên'),
+					('HV010', N'Nguyễn J', N'Nữ', '2000-09-28', N'Quận 4, TpHCM', N'0123456789', N'Sinh viên'),
+					('HV011', N'Nguyễn K', N'Nam', '2011-07-08', N'Quận 2, Hậu Giang', N'0123456789', N'Sinh viên'),
+					('HV012', N'Nguyễn L', N'Nữ', '2011-07-15', N'Quận 3, TpHCM', N'0123456789', N'Sinh viên'),
+					('HV013', N'Nguyễn M', N'Nữ', '2014-03-25', N'Quận 3, Khánh Hòa', N'0123456789', N'Sinh viên'),
+					('HV014', N'Nguyễn N', N'Nữ', '2012-05-14', N'Quận 5, TpHCM', N'0123456789', N'Sinh viên'),
+					('HV015', N'Nguyễn O', N'Nam', '2010-08-03', N'Quận 8, Lâm Đồng', N'0123456789', N'Sinh viên')
+
+
+--------------------------------------------------------------------------------
+
+INSERT INTO GiaoVien (MaGiaoVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu) VALUES
+					('GV001', N'Trần A', N'Nam', '2020-10-01', N'Quận 1, TpHCM', N'0123456789', N'Giáo viên'),
+					('GV002', N'Trần B', N'Nữ', '2003-12-30', N'Quận 2, Long An', N'0123456789', N'Giáo viên'),
+					('GV003', N'Trần C', N'Nam', '2010-03-21', N'Quận 3, Bình Dương', N'0123456789', N'Giáo viên'),
+					('GV004', N'Trần D', N'Nữ', '2013-07-15', N'Quận 4, TpHCM', N'0123456789', N'Giáo viên'),
+					('GV005', N'Trần E', N'Nữ', '2013-07-15', N'Quận 4, Đồng Tháp', N'0123456789', N'Giáo viên'),
+					('GV006', N'Trần F', N'Nam', '2013-07-15', N'Quận 4, An Giang', N'0123456789', N'Giáo viên'),
+					('GV007', N'Trần G', N'Nam', '2013-07-15', N'Quận 4, TpHCM', N'0123456789', N'Giáo viên'),
+					('GV008', N'Trần H', N'Nữ', '2013-07-15', N'Quận 4, Đồng Nai', N'0123456789', N'Giáo viên'),
+					('GV009', N'Trần I', N'Nam', '2013-07-15', N'Quận 4, Gia Lai', N'0123456789', N'Giáo viên'),
+					('GV010', N'Trần J', N'Nữ', '2013-07-15', N'Quận 4, TpHCM', N'0123456789', N'Giáo viên')
+
+
+--------------------------------------------------------------------------------
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV001', N'Nguyễn Văn A', N'Nam', '1990-01-01', N'Hà Nội', '0987654321', N'Quản lý kế hoạch');
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV002', N'Lê Thị B', N'Nữ', '1995-05-05', N'Hồ Chí Minh', '0123456789', N'Nhân viên lễ tân');
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV003', N'Phạm Văn C', N'Nam', '1988-10-10', N'Đà Nẵng', '0909123456', N'Quản lý nhân sự');
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV004', N'Đặng Thị D', N'Nữ', '1993-03-03', N'Hải Phòng', '0918234567', N'Nhân viên lễ tân');
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV005', N'Trần Văn E', N'Nam', '1992-08-08', N'Cần Thơ', '0987123456', N'Nhân viên lễ tân');
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV006', N'Hồ Văn F', N'Nam', '1992-08-08', N'Cần Thơ', '0987123456', N'Quản lý nhân sự');
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV007', N'Lưu Thị G', N'Nữ', '1992-08-08', N'Cần Thơ', '0987123456', N'Quản lý kế hoạch');
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV008', N'Trần Văn H', N'Nam', '1992-08-08', N'Cần Thơ', '0987123456', N'Quản lý kế hoạch');
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV009', N'Nguyễn Thị I', N'Nữ', '1992-08-08', N'Cần Thơ', '0987123456', N'Nhân viên lễ tân');
+
+INSERT INTO NhanVien (MaNhanVien, HoTen, GioiTinh, NgaySinh, DiaChi, SoDienThoai, ChucVu)
+VALUES ('NV010', N'Lâm Văn J', N'Nam', '1992-08-08', N'Cần Thơ', '0987123456', N'Quản lý nhân sự');
+
+--------------------------------------------------------------------------------
+
+INSERT INTO PhongHoc (MaPhongHoc, TenPhongHoc) VALUES
+					('PH01', N'Phòng 1'),
+					('PH02', N'Phòng 2'),
+					('PH03', N'Phòng 3'),
+					('PH04', N'Phòng 4'),
+					('PH05', N'Phòng 5'),
+					('PH06', N'Phòng 6'),
+					('PH07', N'Phòng 7'),
+					('PH08', N'Phòng 8'),
+					('PH09', N'Phòng 9'),
+					('PH10', N'Phòng 10')
+
+--------------------------------------------------------------------------------
+
+INSERT INTO KhoaHoc (MaKhoaHoc, TenKhoaHoc) VALUES
+			('KH01', N'Khóa K01'),
+			('KH02', N'Khóa K02'),
+			('KH03', N'Khóa K03'),
+			('KH04', N'Khóa K04'),
+			('KH05', N'Khóa K05')
+
+--------------------------------------------------------------------------------
+
+INSERT INTO MonHoc (MaMonHoc, TenMonHoc, SoBuoi, HocPhi, MaKhoaHoc) VALUES
+					('MH001', N'Excel', 15, 5300000, 'KH01'),
+					('MH002', N'Word', 25, 8500000, 'KH02'),
+					('MH003', N'Access', 10, 4600000, 'KH03'),
+					('MH004', N'PowerPoint', 25, 8000000, 'KH02'),
+					('MH005', N'MOS', 18, 7500000, 'KH01'),
+					('MH006', N'Excel', 15, 5300000, 'KH02'),
+					('MH007', N'Word', 25, 8500000, 'KH01'),
+					('MH008', N'Excel', 15, 5300000, 'KH03'),
+					('MH009', N'Web', 15, 6500000, 'KH01'),
+					('MH010', N'MOS', 18, 7500000, 'KH02')
+
+ghi chú: word có 2 khóa(1,2); excel có 3 khóa(1,2,3); MOS có 2 khóa(1,2)
+
+--------------------------------------------------------------------------------
+
+INSERT INTO LopHoc (MaLopHoc, TenLopHoc, SiSo, NgayBatDau, NgayKetThuc, MaPhongHoc, CaHoc, MaMonHoc)
+VALUES ('LH001', N'Lớp Word sáng khóa 2', 30, '2023-03-10', '2023-07-10', 'PH05' , 1, 'MH002'),
+       ('LH002', N'Lớp Access sáng khóa 3', 30, '2023-05-10', '2023-10-10', 'PH04' ,2, 'MH003'),
+       ('LH003', N'Lớp MOS chiều khóa 1', 30, '2023-08-10', '2024-02-10', 'PH01' , 3, 'MH005'),
+       ('LH004', N'Lớp Powerpoint chiều khóa 2', 30, '2023-03-10', '2023-07-10', 'PH03' , 4, 'MH004'),
+       ('LH005', N'Lớp Excel tối khóa 1', 30, '2023-03-10', '2023-07-10', 'PH05' , 5, 'MH001'), --trùng ngày trùng phòng nhưng khác ca với lh001
+	   ('LH006', N'Lớp Word sáng khóa 1', 30, '2023-07-15', '2023-12-15', 'PH05' , 1, 'MH007'), --trùng ca trùng phòng nhưng khác ngày với LH001
+	   ('LH007', N'Lớp Excel chiều khóa 2', 30, '2023-03-10', '2023-05-10', 'PH05' , 3, 'MH006'),	--trùng ngày trùng phòng nhưng khác ca với lớp LH005
+	   ('LH008', N'Lớp Excel sáng khóa 3', 30, '2023-12-10', '2024-04-10', 'PH03' , 2, 'MH008'), --không trùng
+	   LH010	LỚP TEST 1	30	3/10/2023	7/10/2023	PH06	1	MH001	40 -- trùng ngày trùng ca khác phòng với lớp lh001;
+	   	LH011	lớp test2	30	5/10/2023	10/10/2023	PH06	2	MH002	40 -- trùng ngày trùng ca khác phòng với lớp lh002;
+		('LH012', N'Lớp MOS sáng khóa 2', 30, '2023-01-10', '2023-03-01', 'PH04' , 2, 'MH010') --trùng phòng trùng ca nhưng khác ngày với lh002
